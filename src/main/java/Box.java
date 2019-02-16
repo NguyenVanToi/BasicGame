@@ -4,19 +4,36 @@ import java.awt.event.KeyEvent;
 
 public class Box
 {
-    private int dx; //delta x = x - x0
-    private int dy;
-    private int x; //position character
+    private int x;
     private int y;
+    private int dx;
+    private int dy;
     private Image image;
-    private final int SPEED = 1;
-    public Box()
+    private int SPEED = 3;
+
+    public Box ()
     {
-        ImageIcon imgIcon = new ImageIcon("image/box.png");
-        image = imgIcon.getImage();
+        ImageIcon imageIcon = new ImageIcon("image/box.png");
+        image = imageIcon.getImage();
         x = 50;
         y = 50;
     }
+
+    public int getX ()
+    {
+        return x;
+    }
+
+    public int getY ()
+    {
+        return y;
+    }
+
+    public Image getImg ()
+    {
+        return image;
+    }
+
     public void move()
     {
         x += dx;
@@ -28,19 +45,21 @@ public class Box
         switch (key)
         {
             case KeyEvent.VK_UP:
-                dy = -1;
+                dy = -SPEED;
                 break;
             case KeyEvent.VK_DOWN:
-                dy = 1;
+                dy = SPEED;
                 break;
             case KeyEvent.VK_LEFT:
-                dx = -1;
+                dx = -SPEED;
                 break;
             case KeyEvent.VK_RIGHT:
-                dx = 1;
+                dx = SPEED;
                 break;
         }
-    }public void keyReleased(KeyEvent e)
+    }
+
+    public void keyReleased(KeyEvent e)
     {
         int key = e.getKeyCode();
         switch (key)

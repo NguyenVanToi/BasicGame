@@ -5,10 +5,15 @@ public class MainTest extends JFrame
 {
     public MainTest()
     {
-        setTitle("MainTest World!");
-        setSize(400, 400);
+//        setTitle("MainTest World!");
+//        setSize(400, 400);
+//        setDefaultCloseOperation(EXIT_ON_CLOSE);
+//        add(new LoadImage());
+        add(new MainGame());
+        setSize(400, 500);
+        setVisible(true);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        add(new LoadImage());
     }
 
 //    @Override
@@ -18,6 +23,6 @@ public class MainTest extends JFrame
 //    }
 
     public static void main(String[] args) {
-        new MainTest().setVisible(true);
+        new MainTest();
     }
 }
