@@ -1,3 +1,5 @@
+package demo;
+
 import javax.swing.JFrame;
 
 
@@ -5,10 +7,10 @@ public class MainTest extends JFrame
 {
     public MainTest()
     {
-//        setTitle("MainTest World!");
+//        setTitle("demo.MainTest World!");
 //        setSize(400, 400);
 //        setDefaultCloseOperation(EXIT_ON_CLOSE);
-//        add(new LoadImage());
+//        add(new demo.LoadImage());
         add(new MainGame());
         setSize(400, 500);
         setVisible(true);
@@ -19,7 +21,7 @@ public class MainTest extends JFrame
 //    @Override
 //    public void paint(Graphics g) {
 //        super.paint(g);
-//        g.drawString("MainTest world!!!", 200, 100);
+//        g.drawString("demo.MainTest world!!!", 200, 100);
 //    }
 
     public static void main(String[] args) {
